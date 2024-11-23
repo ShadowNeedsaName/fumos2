@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.fumos {
+    background-color: rgb(255, 255, 255);
+}
+.container {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.cirno{
+    height: 200px;
+    width:  auto;
+    display: grid;
+    place-items: center;
+}
+body img{
+    height: 250px;
+    width: auto;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 130px 0px;
+}
+header img{
+    height: 250px;
+    padding: 20px;
+}
+nav {
+    
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+.fumos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.fumosdiv {
+    border: 10px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.fumosdiv img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.fumosdiv button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.fumosdiv p {
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: cyan;
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;   
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+.btn:hover {
+    background-color: #0056b3
+}
+
+section {
+    padding: 50px 0;
+}
+
+h2 {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+.caracteristica {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: cyan;
+    border-radius: 110px;
+}
+
+.caracteristica h3 {
+    font-size: 1.5em;
+}
+
+.card {
+    background-color: cyan;
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+form {
+    background-color: cyan; 
+    border-radius: 10px; 
+    padding: 20px; 
+    width: 300px; 
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+footer img{
+    height: 200px;
+    width: auto;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup .close-btn {
+    cursor: pointer;
+    color: red;
+    float: right;
+    font-size: 20px;
+}
+
+.popup .content-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
+.popup .content {
+    flex: 1;
+    max-width: calc(50% - 10px);
+}
+
+.popup .content p {
+    margin: 10px 0;
+}
+
+.popup #buy-button {
+    display: block;
+    margin-top: 20px;
+}
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.cirno{
+    height: 200px;
+    width:  auto;
+    display: grid;
+    place-items: center;
+}
+body img{
+    height: 250px;
+    width: auto;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 130px 0px;
+}
+header img{
+    height: 250px;
+    padding: 20px;
+}
+nav {
+    
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+.fumos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.fumosdiv {
+    border: 10px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.fumosdiv img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.fumosdiv button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.fumosdiv p {
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: cyan;
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;   
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+.btn:hover {
+    background-color: #0056b3
+}
+
+section {
+    padding: 50px 0;
+}
+
+h2 {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+.caracteristica {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: cyan;
+    border-radius: 10px;
+
+}
+
+.caracteristica h3 {
+    font-size: 1.5em;
+}
+
+.testimonio {
+    background-color: cyan;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.testimonio p {
+    font-style: italic;
+}
+
+.testimonio cite {
+    font-weight: bold;
+    color: black;
+}
+
+form {
+    background-color: cyan; 
+    border-radius: 10px; 
+    padding: 20px; 
+    width: 300px; 
+    height: auto;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+footer img{
+    height: 200px;
+    width: auto;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup .close-btn {
+    cursor: pointer;
+    color: red;
+    float: right;
+    font-size: 20px;
+}
+
+.popup .content-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
+.popup .content {
+    flex: 1;
+    max-width: calc(50% - 10px);
+}
+
+.popup .content p {
+    margin: 10px 0;
+}
+
+.popup #buy-button {
+    display: block;
+    margin-top: 20px;
+}
+
+/* Carrito Styles */
+.popup, .cart-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.close-btn, .cart-popup .close-btn {
+    cursor: pointer;
+    color: black;
+    float: right;
+    font-size: 20px;
+}
+.cart-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-items .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-items .cart-item img {
+    width: 50px;
+    height: auto;
+}
+
+.cart-items .cart-item p {
+    margin: 0;
+    flex: 1;
+}
+
+.cart-items .cart-item button {
+    background-color: red;
+    color: black;
+    border: none;
+    cursor: pointer;
+    
+}
+.cart-popup button{
+    background-color: #4CAF50;
+    cursor: pointer;
+
+}
+.img-fluid{
+    height: 300px;
+    width: auto;
+}
+.img-fluid2{
+    height: 250px;
+    width: auto;
+}
+    </style>
+    <title>Fumos Touhou</title>
+    <script src="scriptpag.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1> Bienvenido a la tienda de fumos</h1>
+            <p>Explora nuestra exclusiva colección de fumos, hechos a mano con amor y dedicacion para nuestros clientes.</p>
+            <nav>
+                <ul>
+                    <li><a href="#caracteristicas" class="btn">Inicio</a></li>
+                    <li><a href="#Productos" class="btn">Productos</a></li>
+                    <li><a href="#contacto" class="btn">Contacto</a></li>
+                    <li><a href="#testimonios" class="btn">Testimonios</a></li>
+                </ul>
+            </nav>
+            <img src="{% static 'images/aimingup.png' %}" class="img-fluid" alt="Aiming Up">
+        </div>
+    </header>
+    <section id="caracteristicas">
+        <div class="container">
+            <h2>Por que elegir nuestros fumos</h2>
+            <div class="row">
+                <div class="col-md-4 caracteristica">
+                    <h3>La Mejor Calidad</h3>
+                    <p>Cada fumo es fabricado con materiales de alta calidad para garantizar su durabilidad.</p>
+                </div>
+                <div class="col-md-4 caracteristica">
+                    <h3>Diseños Fieles</h3>
+                    <p>Nuestros fumos presentan diseños fieles a los personajes de Touhou, con un toque personal de creatividad.</p>
+                </div>
+                <div class="col-md-4 caracteristica">
+                    <h3>Envios a Todo el Mundo</h3>
+                    <p>No importa donde estés, el delivery de tu fumo favorito será a la puerta de tu casa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Productos">
+        <h1>Nuestros Fumos</h1>
+        {% for producto in productos %}
+        <div class="fumos" id="product-list">
+            <div class="fumosdiv" data-category="normalfumo" data-images="https://resize.cdn.otakumode.com/ex/300.300/2.152.998.997/shop/product/42c16dffc8e443f48d83cdd4046f2e10.jpg,https://pbs.twimg.com/media/Fo6IT5GaYAAhdKc.jpg,https://images-na.ssl-images-amazon.com/images/I/518hoCBmucL._AC_SX466_.jpg,https://i.ebayimg.com/images/g/qtIAAOSwn8hlly2B/s-l1600.jpg" data-descriptions="{{producto.titulo}}, Remilia 20cm, Youmu 20cm, Sakuya 20cm" data-prices="{{producto.precio}},30000,30000,30000">
+                <img src="https://resize.cdn.otakumode.com/ex/1000.1200/shop/product/42c16dffc8e443f48d83cdd4046f2e10.jpg" alt="" class="fumo-image">
+                <p>{{producto.titulo}} - ${{producto.precio}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+    <button class="cart-button" id="shopping-cart-button">Carrito (0)</button>
+
+    <div class="cart-popup" id="cart-popup">
+        <span class="close-btn" id="close-cart">&times;</span>
+        <h2>Carrito</h2>
+        <ul class="cart-items" id="cart-items"></ul>
+        <p id="cart-total"></p>
+        <button onclick="checkout()">Pagar por Fumos</button>
+    </div>
+    <section id="testimonios" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Testimonios de Nuestros Clientes</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-3 mb-4">
+                        <p class="card-text">"Simplemente adoro mi nuevo fumo de Marisa! La calidad es increíble y el detalle es exacto."</p>
+                        <cite>- Cliente satisfecho</cite>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-3 mb-4">
+                        <p class="card-text">"Mi colección de fumos ha crecido gracias a las adquisiciones aquí. ¡Excelente servicio, rapido y barato!"</p>
+                        <cite>- Coleccionista de fumos</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto">
+        <div class="cirno">
+            <img src="{% static 'images/cirnoreading.png' %}" class="img-fluid2" alt="Cirno Reading">
+        </div>
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <form action="#" method="post" onsubmit="return questionario()">
+                <input type="text" name="name" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Correo" required>
+                <textarea name="message" placeholder="Tu Mensaje" required></textarea>
+                <button type="submit" class="btn">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>Hecho por Bernardo Markus</p>
+            <img src="https://art.ngfiles.com/images/2023000/2023011_forks0rspoons_reimu-fumo.png?f1629287680"> 
+        </div>
+    </footer>
+    <div class="popup" id="product-popup">
+        <span class="close-btn" id="close-popup">&times;</span>
+        <div class="content-container" id="popup-content"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    {% load static %}
+    <script src="{% static 'js/scriptpag.js' %}"></script>
+</body>
+</html>
